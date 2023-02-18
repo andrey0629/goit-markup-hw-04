@@ -26,7 +26,7 @@
     /* для button--order-default*/
     --button-order-defauit: #4D5AE5;
     /* для button--order-hover*/
-    --button-order-hover: #4D5AE5;
+    --button-order-hover: #404BBF;
     /* для button--order-click*/
     --button-order-click: #404BBF;
 
@@ -131,10 +131,6 @@ img {
     padding: 24px 0;
 }
 
-.header-link:hover {
-    color: var(--nav-click);
-}
-
 .header-link:hover,
 .header-link:focus {
     color: var(--nav-click);
@@ -147,8 +143,8 @@ img {
 /*ADDRESS*/
 
 .address {
-    list-style-type: none;
     display: flex;
+    list-style-type: none;
     justify-content: space-between;
     gap: 40px;
 }
@@ -191,13 +187,17 @@ img {
 
 /*section order-service*/
 .section-order-service {
-    background-color: var(--dark-color);
+    
 }
 
 .section-order-service.section {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1440px 600px
 }
 
 .order-titel {   
@@ -255,6 +255,7 @@ img {
 .features-li {
     display: flex;
     gap: 24px;
+
 }   
 
 .f-li-titel {
@@ -262,6 +263,31 @@ img {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2
+}
+
+.features-icon {
+    display: flex;
+    list-style: none;
+    height: 112px;
+    margin-bottom: 8px;
+    gap: 24px
+    /*flex-basis: calc((100% - 72px) /3);*/
+}
+
+.icon-li {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 264px;
+    height: 112px;
+    background: var(--light-color);
+    border-radius: 4px;
+}
+
+.icon-features {
+    width: 59.72px;
+    height: 64px;
+    fill: var(--light-color);
 }
 
 .what-are-we-doing-links,
@@ -283,6 +309,10 @@ img {
     list-style-type: none;
     text-decoration-line: none;
     background-color: var(--background-color);
+}
+
+.f-li {
+    flex-basis: calc((100% - 72px) / 3);
 }
 
 .our-team-links {
@@ -331,6 +361,40 @@ img {
     text-align: center;
 }
 
+/* Sozials */
+.sozial-list {
+    display: flex;
+    /*gap: 24px;*/
+    justify-content: space-between;
+    padding-top: 8px;
+    list-style-type: none;
+}
+
+.sozial-item {
+    width: 40px;
+    height: 40px;
+}
+
+.sozial-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-brand-color);
+    border-radius: 50%;
+}
+
+.sozial-link:hover {
+    background: var(--button-order-hover);
+}
+.sozial-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--light-color);
+}
+
+
 /*для всех тегов <p>, кроме белого в футере*/
 .features .text,
 .our-team .text, 
@@ -340,6 +404,50 @@ img {
     letter-spacing: 0.02em;
     color: var(--text-color);
 }
+
+.Customers.section {
+    padding-top: 130px;
+}
+
+.customers-ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+}
+
+.customers-li {
+    list-style: none;
+    width: 168px;
+    height: 88px;
+}
+
+.customers-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    border: 1px solid var(--subtle-text-color);
+    border-radius: 4px;
+}
+
+.customers-link:hover {
+    background-color: var(--background-color);
+    border: 1px solid var(--button-order-hover);
+}
+
+.customers-icon {
+    width: 104px;
+    height: 56px;
+    fill: var(--subtle-text-color);
+}
+
+.customers-icon:hover {
+    fill: var(--button-order-hover)
+}
+
 
                          /*css для страницы portfolio.html*/
 
@@ -438,7 +546,13 @@ img {
     margin-right: auto;
 }
 
+/*.foot-logo {
+    width: 264px;
+    margin-right: 120px;
+}*/
+
 .footer .logo-link {
+    display: block;
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -453,11 +567,80 @@ img {
                          
 .footer .text {
     display: block;
-    max-width: 264px;
+    /*max-width: 264px;*/
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
     color: var(--accent-color);
     margin-top: 16px;
+}
+
+.foot-ul {
+    display: flex;
+    justify-content:flex-start ;
+}
+
+.foot-li {
+    list-style: none;
+}
+
+.foot-li.one {
+    width: 264px;
+}
+
+.foot-li.two {
+    width: 208px;
+    margin-left: 120px;
+}
+
+.foot-social-link:hover {
+    background: var(--button-order-hover);
+}
+/*
+.social-media {
+    margin-left: 120px;
+    margin-top: 100px;
+    width: 208px;
+    height: 80px;
+}*/
+
+.soc-media-titel {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--background-color);
+    padding-bottom: 16px;
+}
+
+/* Sozials */
+.foot-social-list {
+    display: flex;
+    flex-direction: row;
+    /*gap: 24px;*/
+    justify-content: space-between;
+}
+
+.foot-social-item {
+    width: 40px;
+    height: 40px;
+    flex-basis: calc((100% - 72px) 3);
+    list-style: none;
+}
+
+.foot-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.foot-social-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--light-color);
 }
