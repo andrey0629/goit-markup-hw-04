@@ -432,7 +432,7 @@ img {
     box-sizing: border-box;
     border: 1px solid var(--subtle-text-color);
     border-radius: 4px;
-    color: var(--button-order-hover);
+    color: var(--subtle-text-color);
 }
 
 .customers-link:hover {
@@ -442,15 +442,16 @@ img {
 .customers-icon {
     width: 104px;
     height: 56px;
-    fill: var(--subtle-text-color);
+    fill: currentColor;
+    /*fill: var(--subtle-text-color);*/
 }
 
-
+/*
 .customers-ul:hover,
 .customers-li:hover,
-.customers-link:hover,
-.customers-icon:hover {
-    fill: var(--button-order-hover)
+.customers-icon:hover,*/
+.customers-link:hover {
+    color: var(--button-order-hover)
 }
 
 
