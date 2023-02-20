@@ -278,10 +278,11 @@ img {
     display: flex; 
     align-items: center;
     justify-content: center;
-    width: 264px;
+    max-width: 264px;
     height: 112px;
     background: var(--light-color);
     border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 .icon-features {
@@ -366,7 +367,7 @@ img {
     display: flex;
     /*gap: 24px;*/
     justify-content: space-between;
-    padding-top: 8px;
+    margin-top: 8px;
     list-style-type: none;
 }
 
@@ -617,7 +618,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--background-color);
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 /* Sozials */
@@ -631,7 +632,7 @@ img {
 .foot-social-item {
     width: 40px;
     height: 40px;
-    flex-basis: calc((100% - 72px) 3);
+    flex-basis: calc((100% - 72px) / 3);
     list-style: none;
 }
 
